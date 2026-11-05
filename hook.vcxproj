@@ -37,11 +37,11 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{b46c95eb-3ecf-4358-8a84-919fd88a5339}</ProjectGuid>
     <Keyword>Android</Keyword>
-    <RootNamespace>PVZ2ExampleMod</RootNamespace>
+    <RootNamespace>PVZ2LibValerie</RootNamespace>
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <ApplicationType>Android</ApplicationType>
     <ApplicationTypeRevision>3.0</ApplicationTypeRevision>
-    <ProjectName>PVZ2ExampleMod</ProjectName>
+    <ProjectName>PVZ2LibValerie</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
@@ -104,6 +104,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <TargetName>libValerie</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
   </PropertyGroup>
@@ -111,47 +112,67 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Users\brekko\AppData\Local\Android\Sdk\extras\saurikit\cydia_substrate;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\brekko\AppData\Local\Android\Sdk\extras\saurikit\cydia_substrate;%(AdditionalIncludeDirectories);C:\cydia_substrate\cydia_substrate</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Users\brekko\AppData\Local\Android\Sdk\extras\saurikit\cydia_substrate\lib\armeabi;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\brekko\AppData\Local\Android\Sdk\extras\saurikit\cydia_substrate\lib\armeabi;%(AdditionalLibraryDirectories);C:\cydia_substrate\cydia_substrate\lib\armeabi</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(StlIncludeDirectories);$(Sysroot)\usr\include;$(Sysroot)\usr\include\$(AndroidHeaderTriple);$(VS_NdkRoot)\sources\android\support\include;%(AdditionalIncludeDirectories);C:\cydia_substrate\cydia_substrate</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\x86_64-linux-android\$(ToolchainFullVersionName);$(StlLibraryPath);C:\cydia_substrate\cydia_substrate\lib\armeabi</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(StlIncludeDirectories);$(Sysroot)\usr\include;$(Sysroot)\usr\include\$(AndroidHeaderTriple);$(VS_NdkRoot)\sources\android\support\include;%(AdditionalIncludeDirectories);C:\cydia_substrate\cydia_substrate</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\i686-linux-android\$(ToolchainFullVersionName);$(StlLibraryPath);C:\cydia_substrate\cydia_substrate\lib\armeabi</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(StlIncludeDirectories);$(Sysroot)\usr\include;$(Sysroot)\usr\include\$(AndroidHeaderTriple);$(VS_NdkRoot)\sources\android\support\include;%(AdditionalIncludeDirectories);C:\cydia_substrate\cydia_substrate</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\i686-linux-android\$(ToolchainFullVersionName);$(StlLibraryPath);C:\cydia_substrate\cydia_substrate\lib\armeabi</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(StlIncludeDirectories);$(Sysroot)\usr\include;$(Sysroot)\usr\include\$(AndroidHeaderTriple);$(VS_NdkRoot)\sources\android\support\include;%(AdditionalIncludeDirectories);C:\cydia_substrate\cydia_substrate</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainFullVersionName);$(StlLibraryPath);C:\cydia_substrate\cydia_substrate\lib\armeabi</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(StlIncludeDirectories);$(Sysroot)\usr\include;$(Sysroot)\usr\include\$(AndroidHeaderTriple);$(VS_NdkRoot)\sources\android\support\include;%(AdditionalIncludeDirectories);C:\cydia_substrate\cydia_substrate</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainFullVersionName);$(StlLibraryPath);C:\cydia_substrate\cydia_substrate\lib\armeabi</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;C:\Users\brekko\AppData\Local\Android\Sdk\extras\saurikit\cydia_substrate;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;C:\cydia_substrate\cydia_substrate;%(AdditionalIncludeDirectories);C:\cydia_substrate\cydia_substrate</AdditionalIncludeDirectories>
     </ClCompile>
     <PostBuildEvent>
       <Message>
@@ -163,7 +184,7 @@
       <SharedLibrarySearchPath>%(SharedLibrarySearchPath)</SharedLibrarySearchPath>
       <AdditionalDependencies>
       </AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\brekko\AppData\Local\Android\Sdk\extras\saurikit\cydia_substrate\lib\armeabi;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\cydia_substrate\cydia_substrate\lib\armeabi;%(AdditionalLibraryDirectories);C:\cydia_substrate\cydia_substrate\lib\armeabi</AdditionalLibraryDirectories>
       <LibraryDependencies>substrate;%(LibraryDependencies)</LibraryDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -171,7 +192,7 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;C:\Users\brekko\AppData\Local\Android\Sdk\extras\saurikit\cydia_substrate;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;C:\Users\brekko\AppData\Local\Android\Sdk\extras\saurikit\cydia_substrate;%(AdditionalIncludeDirectories);C:\cydia_substrate\cydia_substrate</AdditionalIncludeDirectories>
     </ClCompile>
     <PostBuildEvent>
       <Message>
@@ -183,21 +204,31 @@
       <SharedLibrarySearchPath>%(SharedLibrarySearchPath)</SharedLibrarySearchPath>
       <AdditionalDependencies>
       </AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\brekko\AppData\Local\Android\Sdk\extras\saurikit\cydia_substrate\lib\armeabi;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\brekko\AppData\Local\Android\Sdk\extras\saurikit\cydia_substrate\lib\armeabi;%(AdditionalLibraryDirectories);C:\cydia_substrate\cydia_substrate\lib\armeabi</AdditionalLibraryDirectories>
       <LibraryDependencies>substrate;%(LibraryDependencies)</LibraryDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="PVZ2ExampleMod.cpp" />
+    <ClCompile Include="PVZ2LibValerie.cpp" />
+    <ClCompile Include="PvZ2\Board.cpp" />
     <ClCompile Include="memUtils.cpp" />
+    <ClCompile Include="SexyAppFramework\Widget.cpp" />
+    <ClCompile Include="SexyAppFramework\WidgetContainer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="PVZ2ExampleMod.h" />
+    <ClInclude Include="PVZ2LibValerie.h" />
     <ClInclude Include="Logging.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="memUtils.h" />
     <ClInclude Include="PvZ2\Board.h" />
+    <ClInclude Include="SexyAppFramework\Color.h" />
+    <ClInclude Include="SexyAppFramework\Rect.h" />
+    <ClInclude Include="SexyAppFramework\SexyMath.h" />
+    <ClInclude Include="SexyAppFramework\SexyVector2.h" />
+    <ClInclude Include="SexyAppFramework\SexyVector3.h" />
     <ClInclude Include="SexyTypes.h" />
+    <ClInclude Include="Widget.h" />
+    <ClInclude Include="WidgetContainer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

@@ -6,4 +6,3 @@
 #include <sys/resource.h>
 
 #include <android/log.h>
-#include "SexyTypes.h"
